@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -35,7 +36,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBanksForm = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -67,7 +68,7 @@
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnBanksForm);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
             this.panel1.Name = "panel1";
@@ -152,18 +153,19 @@
             this.button3.Text = "Faturalar";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnBanksForm
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(28, 61);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 35);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Bankalar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnBanksForm.BackColor = System.Drawing.Color.Transparent;
+            this.btnBanksForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBanksForm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBanksForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBanksForm.Location = new System.Drawing.Point(28, 61);
+            this.btnBanksForm.Name = "btnBanksForm";
+            this.btnBanksForm.Size = new System.Drawing.Size(137, 35);
+            this.btnBanksForm.TabIndex = 2;
+            this.btnBanksForm.Text = "Bankalar";
+            this.btnBanksForm.UseVisualStyleBackColor = false;
+            this.btnBanksForm.Click += new System.EventHandler(this.btnBanksForm_Click);
             // 
             // button1
             // 
@@ -318,6 +320,7 @@
             this.btnRemoveBill.TabIndex = 11;
             this.btnRemoveBill.Text = "Ödeme Sil";
             this.btnRemoveBill.UseVisualStyleBackColor = false;
+            this.btnRemoveBill.Click += new System.EventHandler(this.btnRemoveBill_Click);
             // 
             // btnUpdateBill
             // 
@@ -330,10 +333,19 @@
             this.btnUpdateBill.TabIndex = 12;
             this.btnUpdateBill.Text = "Ödeme Güncelle";
             this.btnUpdateBill.UseVisualStyleBackColor = false;
+            this.btnUpdateBill.Click += new System.EventHandler(this.btnUpdateBill_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -372,7 +384,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBanksForm;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtBillPeriod;

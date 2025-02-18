@@ -51,5 +51,12 @@ namespace FinancialCrm
             lblBankProcess5.Text = bankProcess5.Description + " / " + bankProcess5.Amount + " ₺ / " + bankProcess5.ProcessDate;
             //***********************************************
         }
+
+        private void btnBillForm_Click(object sender, EventArgs e)
+        {
+            FrmBilling frm = new FrmBilling();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
