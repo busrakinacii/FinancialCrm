@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialCrm.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace FinancialCrm
         public FrmDashboard()
         {
             InitializeComponent();
+        }
+        FinancialCrmDbEntities db = new FinancialCrmDbEntities();
+        private void FrmDashboard_Load(object sender, EventArgs e)
+        {
+            var totalBalance = db.Banks.Sum(x => x.BankBalance);
+            lblTotalBalance.Text = totalBalance.ToString();
         }
     }
 }
