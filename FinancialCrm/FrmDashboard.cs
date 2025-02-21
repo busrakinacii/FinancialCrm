@@ -26,6 +26,38 @@ namespace FinancialCrm
 
             var lastBankProcessAmount = db.BankProcesses.OrderByDescending(x => x.ProcessDate).Take(1).Select(y => y.Amount).FirstOrDefault();
             lblLastBankProcessAmount.Text = lastBankProcessAmount.ToString();
+
+
+            //Chart 1 Kodları
+            //
+            var bankData = db.Banks.Select(x => new
+            {
+                x.BankTitle,
+                x.BankBalance
+            }).ToList();
+            chart1.Series.Clear();
+            var series = chart1.Series.Add("Series1");
+            foreach (var item in bankData)
+            {
+                series.Points.AddXY(item.BankTitle, item.BankBalance);
+            }
+
+
+            //Chart 2 Kodları
+            //
+            var billData = db.Bills.Select(x => new
+            {
+                x.BillTitle,
+                x.BillAmount
+            }).ToList();
+            chart2.Series.Clear();
+            var series2 = chart2.Series.Add("Faturalar");
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pyramid;
+            foreach (var item in billData)
+            {
+                series2.Points.AddXY(item.BillTitle, item.BillAmount);
+            }
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

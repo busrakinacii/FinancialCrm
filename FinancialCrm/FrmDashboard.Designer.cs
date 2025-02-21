@@ -340,8 +340,9 @@
             this.chart2.Location = new System.Drawing.Point(515, 235);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.Name = "Faturalar";
             this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(315, 227);
             this.chart2.TabIndex = 16;
