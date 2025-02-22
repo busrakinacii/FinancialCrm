@@ -88,5 +88,11 @@ namespace FinancialCrm
                 lblBillAmount.Text = EthernetBill.ToString() + "₺";
             }
         }
+
+        private void btnBank_Click(object sender, EventArgs e)
+        {
+            FrmBanks frm = new FrmBanks();
+            frm.Show();
+        }
     }
 }
