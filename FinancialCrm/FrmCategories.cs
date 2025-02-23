@@ -58,6 +58,45 @@ namespace FinancialCrm
             dataGridView1.DataSource = categoryList;
         }
 
+        private void btnRemoveCategory_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtCategoryId.Text);
+            var removeValue = db.Categories.Find(id);
+            db.Categories.Remove(removeValue);
+            db.SaveChanges();
+            MessageBox.Show("Kategori Başarılı Bir Şekilde Sistemden Silindi.", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //Category List Process
+            //
+            var categoryList = db.Categories.Select(x => new
+            {
+                x.CategoryId,
+                x.CategoryName,
+            }).ToList();
+            dataGridView1.DataSource = categoryList;
+
+        }
+
+        private void btnUpdateCategory_Click(object sender, EventArgs e)
+        {
+            string category = txtCategoryName.Text;
+            int id = int.Parse(txtCategoryId.Text);
+            var updateValue = db.Categories.Find(id);
+            updateValue.CategoryName = category;
+            db.SaveChanges();
+
+            MessageBox.Show("Kategori Başarılı Bir Şekilde Sistemde Güncellendi.", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //Category List Process
+            //
+            var categoryList = db.Categories.Select(x => new
+            {
+                x.CategoryId,
+                x.CategoryName,
+            }).ToList();
+            dataGridView1.DataSource = categoryList;
+
+        }
     }
 }
 
