@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblLastBankProcessAmount = new System.Windows.Forms.Label();
             this.lblBillAmount = new System.Windows.Forms.Label();
             this.lblTotalBalance = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.btnBillForm = new System.Windows.Forms.Button();
+            this.btnSpending = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
             this.btnBank = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
@@ -233,18 +233,19 @@
             this.button5.Text = "Banka Hareketleri";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // btnBillForm
+            // btnSpending
             // 
-            this.btnBillForm.BackColor = System.Drawing.Color.Transparent;
-            this.btnBillForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBillForm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBillForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBillForm.Location = new System.Drawing.Point(31, 149);
-            this.btnBillForm.Name = "btnBillForm";
-            this.btnBillForm.Size = new System.Drawing.Size(137, 35);
-            this.btnBillForm.TabIndex = 4;
-            this.btnBillForm.Text = "Giderler";
-            this.btnBillForm.UseVisualStyleBackColor = false;
+            this.btnSpending.BackColor = System.Drawing.Color.Transparent;
+            this.btnSpending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSpending.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSpending.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSpending.Location = new System.Drawing.Point(31, 149);
+            this.btnSpending.Name = "btnSpending";
+            this.btnSpending.Size = new System.Drawing.Size(137, 35);
+            this.btnSpending.TabIndex = 4;
+            this.btnSpending.Text = "Giderler";
+            this.btnSpending.UseVisualStyleBackColor = false;
+            this.btnSpending.Click += new System.EventHandler(this.btnSpending_Click);
             // 
             // btnBill
             // 
@@ -305,7 +306,7 @@
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.btnBillForm);
+            this.panel1.Controls.Add(this.btnSpending);
             this.panel1.Controls.Add(this.btnBill);
             this.panel1.Controls.Add(this.btnBank);
             this.panel1.Controls.Add(this.btnCategory);
@@ -322,33 +323,33 @@
             // 
             // chart1
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(194, 235);
             this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(312, 227);
             this.chart1.TabIndex = 15;
             this.chart1.Text = "chart1";
             // 
             // chart2
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart2.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(515, 235);
             this.chart2.Name = "chart2";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pyramid;
-            series6.Legend = "Legend1";
-            series6.Name = "Faturalar";
-            this.chart2.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pyramid;
+            series2.Legend = "Legend1";
+            series2.Name = "Faturalar";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(315, 227);
             this.chart2.TabIndex = 16;
             this.chart2.Text = "chart2";
@@ -446,7 +447,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btnBillForm;
+        private System.Windows.Forms.Button btnSpending;
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Button btnBank;
         private System.Windows.Forms.Button btnCategory;

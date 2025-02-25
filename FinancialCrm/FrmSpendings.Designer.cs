@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnUpdateSpending = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSpending = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
@@ -64,14 +64,14 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -143,6 +143,7 @@
             this.btnCreateSpending.TabIndex = 10;
             this.btnCreateSpending.Text = "Gider Ekle";
             this.btnCreateSpending.UseVisualStyleBackColor = false;
+            this.btnCreateSpending.Click += new System.EventHandler(this.btnCreateSpending_Click);
             // 
             // btnSpendingList
             // 
@@ -155,6 +156,7 @@
             this.btnSpendingList.TabIndex = 9;
             this.btnSpendingList.Text = "Gider Listesi";
             this.btnSpendingList.UseVisualStyleBackColor = false;
+            this.btnSpendingList.Click += new System.EventHandler(this.btnSpendingList_Click);
             // 
             // txtSpendingDate
             // 
@@ -265,7 +267,7 @@
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnSpending);
             this.panel1.Controls.Add(this.btnBill);
             this.panel1.Controls.Add(this.btnBanksForm);
             this.panel1.Controls.Add(this.btnCategory);
@@ -326,18 +328,19 @@
             this.button5.Text = "Banka Hareketleri";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnSpending
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(31, 149);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(137, 35);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Giderler";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnSpending.BackColor = System.Drawing.Color.Transparent;
+            this.btnSpending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSpending.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSpending.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSpending.Location = new System.Drawing.Point(31, 149);
+            this.btnSpending.Name = "btnSpending";
+            this.btnSpending.Size = new System.Drawing.Size(137, 35);
+            this.btnSpending.TabIndex = 4;
+            this.btnSpending.Text = "Giderler";
+            this.btnSpending.UseVisualStyleBackColor = false;
+            this.btnSpending.Click += new System.EventHandler(this.btnSpending_Click);
             // 
             // btnBill
             // 
@@ -382,6 +385,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmSpendings";
             this.Text = "FrmSpendings";
+            this.Load += new System.EventHandler(this.FrmSpendings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -415,7 +419,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSpending;
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbCategory;
