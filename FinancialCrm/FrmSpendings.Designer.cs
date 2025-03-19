@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnUpdateSpending = new System.Windows.Forms.Button();
@@ -64,14 +64,14 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -98,6 +98,7 @@
             this.btnUpdateSpending.TabIndex = 12;
             this.btnUpdateSpending.Text = "Gider Güncelle";
             this.btnUpdateSpending.UseVisualStyleBackColor = false;
+            this.btnUpdateSpending.Click += new System.EventHandler(this.btnUpdateSpending_Click);
             // 
             // panel2
             // 
@@ -131,6 +132,7 @@
             this.btnRemoveSpending.TabIndex = 11;
             this.btnRemoveSpending.Text = "Gider Sil";
             this.btnRemoveSpending.UseVisualStyleBackColor = false;
+            this.btnRemoveSpending.Click += new System.EventHandler(this.btnRemoveSpending_Click);
             // 
             // btnCreateSpending
             // 
@@ -246,6 +248,7 @@
             this.btnBanksForm.TabIndex = 2;
             this.btnBanksForm.Text = "Bankalar";
             this.btnBanksForm.UseVisualStyleBackColor = false;
+            this.btnBanksForm.Click += new System.EventHandler(this.btnBanksForm_Click);
             // 
             // btnCategory
             // 
@@ -259,6 +262,7 @@
             this.btnCategory.TabIndex = 1;
             this.btnCategory.Text = "Kategoriler";
             this.btnCategory.UseVisualStyleBackColor = false;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // panel1
             // 
@@ -288,6 +292,7 @@
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "Çıkış Yap";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // button7
             // 
@@ -314,6 +319,7 @@
             this.btnDashboard.TabIndex = 6;
             this.btnDashboard.Text = "DashBoard";
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // button5
             // 
@@ -354,6 +360,7 @@
             this.btnBill.TabIndex = 3;
             this.btnBill.Text = "Faturalar";
             this.btnBill.UseVisualStyleBackColor = false;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // label5
             // 

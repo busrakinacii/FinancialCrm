@@ -80,8 +80,7 @@ namespace FinancialCrm
 
         private void btnSpending_Click(object sender, EventArgs e)
         {
-
-            FrmDashboard fr = new FrmDashboard();
+            FrmSpendings fr = new FrmSpendings();
             fr.Show();
         }
     }
