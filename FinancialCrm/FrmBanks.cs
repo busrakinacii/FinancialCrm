@@ -83,5 +83,11 @@ namespace FinancialCrm
             FrmSpendings fr = new FrmSpendings();
             fr.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FrmSetting frm = new FrmSetting();
+            frm.Show();
+        }
     }
 }

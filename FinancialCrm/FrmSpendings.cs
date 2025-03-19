@@ -137,5 +137,11 @@ namespace FinancialCrm
             //
             spendingList();
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            FrmSetting frm = new FrmSetting();
+            frm.Show();
+        }
     }
 }
