@@ -2,9 +2,11 @@
 Bu Repo Murat Yücedağ'ın Eğitiminde Gerçekleştirdiğim Projeyi İçermektedir.Projede Mssql Veritabanı Kullanılmış Olup Entity Framework Kullanım Yöntemlerinden Model First Kullanılmıştır.
 # 📍Entity Framework (EF), .NET platformu için geliştirilmiş bir Object-Relational Mapper (ORM) aracıdır. EF, veritabanı işlemlerini C# nesneleri üzerinden gerçekleştirmeyi sağlar ve SQL sorguları yazmadan veritabanıyla etkileşim kurmaya olanak tanır.
 # 🔹 Entity Framework Kullanım Yöntemleri
-# 1️⃣ Code First: C# sınıflarını kullanarak veritabanı tablolarını otomatik oluşturur.
-# 2️⃣ Database First: Mevcut bir veritabanından otomatik olarak C# modellerini oluşturur.
-# 3️⃣ Model First: Görsel bir model oluşturup buradan hem veritabanını hem de kodları üretir.
+1️⃣ Code First: C# sınıflarını kullanarak veritabanı tablolarını otomatik oluşturur.
+
+2️⃣ Database First: Mevcut bir veritabanından otomatik olarak C# modellerini oluşturur.
+
+3️⃣ Model First: Görsel bir model oluşturup buradan hem veritabanını hem de kodları üretir.
 # Projeye dair görüntüler
 #  🔹Login Ekranı
 ![Ekran görüntüsü 2025-03-20 161448](https://github.com/user-attachments/assets/cdf5e220-e355-4c28-9977-249f4cdaac24)
