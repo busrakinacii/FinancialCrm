@@ -8,7 +8,7 @@ Bu Repo Murat Yücedağ'ın Eğitiminde Gerçekleştirdiğim Projeyi İçermekte
 
 3️⃣ Model First: Görsel bir model oluşturup buradan hem veritabanını hem de kodları üretir.
 # Projeye dair görüntüler
-# Modelimizn Görüntüsü
+# ⬇️⬇️ Modelimizn Görüntüsü
 ![image](https://github.com/user-attachments/assets/30d26330-646e-4c98-8dcc-e17f0b9cb5e1)
 
 #  🔹Login Ekranı
